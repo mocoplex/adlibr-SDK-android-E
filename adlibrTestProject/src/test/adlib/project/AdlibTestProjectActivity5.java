@@ -16,7 +16,6 @@ public class AdlibTestProjectActivity5 extends AdlibActivity {
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-    	LogUtil.getInstance().setUser("MocoplexDeveloper");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main5);
         

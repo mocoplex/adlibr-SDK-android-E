@@ -12,8 +12,7 @@ public class AdlibTestProjectActivity2 extends AdlibActivity {
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-    	LogUtil.getInstance().setUser("MocoplexDeveloper");
-        super.onCreate(savedInstanceState);
+    	super.onCreate(savedInstanceState);
         setContentView(R.layout.main2);
         
         // 각 애드립 액티비티에 애드립 앱 키값을 필수로 넣어주어야 합니다.

@@ -21,7 +21,6 @@ public class AdlibTestProjectActivity extends ListActivity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		LogUtil.getInstance().setUser("MocoplexDeveloper");
 		super.onCreate(savedInstanceState);
 		
 		initAds();
