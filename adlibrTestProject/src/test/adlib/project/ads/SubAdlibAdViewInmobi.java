@@ -46,8 +46,8 @@ public class SubAdlibAdViewInmobi extends SubAdlibAdViewCore {
 	protected boolean bGotAd = false;
 
 	// 여기에 인모비에서 발급받은 key 를 입력하세요.
-	protected String inmobiKey = "4028cb133479e4180134ab46f4e40532";
-	protected static String inmobiInterstitialKey = "4028cb133479e4180134ab46f4e40532";
+	protected String inmobiKey = "INMOBI_ID";
+	protected static String inmobiInterstitialKey = "INMOBI_Interstitial_ID";
 	
 	protected static Handler intersHandler = null;
 

@@ -38,8 +38,8 @@ public class SubAdlibAdViewAdmob extends SubAdlibAdViewCore {
 	protected boolean bGotAd = false;
 	
 	// 여기에 ADMOB ID 를 입력하세요. (여기서 ADMOB ID는 AD_UNIT_ID, 광고 단위 ID를 지칭합니다.)
-	protected String admobID = "a14e9da97067aaa";
-	protected static String admobInterstitialID = "a14e9da97067aaa";
+	protected String admobID = "ADMOB_ID";
+	protected static String admobInterstitialID = "ADMOB_Interstitial_ID";
     
     private AdRequest request = new AdRequest.Builder().build();
     

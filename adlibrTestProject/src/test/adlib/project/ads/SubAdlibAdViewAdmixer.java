@@ -35,7 +35,7 @@ public class SubAdlibAdViewAdmixer extends SubAdlibAdViewCore {
 	protected boolean bGotAd = false;
 	
 	// 여기에 AdMixer ID 를 입력하세요.
-	protected String admixerID = "cr8581vy";
+	protected String admixerID = "AdMixer_ID";
 	protected static String admixerInterstitialID = "AdMixer_Interstitial_ID";
 
 	public SubAdlibAdViewAdmixer(Context context) {

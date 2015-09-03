@@ -35,7 +35,7 @@ public class SubAdlibAdViewCauly extends SubAdlibAdViewCore implements com.fsn.c
 	
 	// 여기에 CAULY ID를 입력합니다.
 	protected String caulyID = "CAULY_ID";
-	protected static String caulyInterstitialID = "CAULY_INTERSTITIAL_ID";
+	protected static String caulyInterstitialID = "CAULY_Interstitial_ID";
 	
 	protected static Handler intersHandler = null;
 	
