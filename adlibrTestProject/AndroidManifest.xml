@@ -17,6 +17,7 @@
 	<!-- 플랫폼에 따라 권한을 추가하시기 바랍니다. (애드립의 필수는 아닙니다.) -->
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 	<!-- 플랫폼에 따라 권한을 추가하시기 바랍니다. (애드립의 필수는 아닙니다.) -->
     
     <application
@@ -47,12 +48,7 @@
 			android:label="Ad Activity"
 			android:theme="@android:style/Theme.Translucent.NoTitleBar" >
 		</activity>
-		<activity
-			android:name="com.skplanet.tad.AdVideoPlayer"
-			android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-			android:label="Ad Video Player"
-			android:theme="@android:style/Theme.NoTitleBar" >
-        </activity>
+		       
 		<!-- TAD - 사용하지 않는다면 여기까지 삭제 -->
         
         <!-- ADAM - 전면광고 노출을 위해 필요한 선언입니다. -->
@@ -83,18 +79,22 @@
 			android:name="ShallWeAd_AppKey"
 			android:value="발급받은 ShallWeAd 등록키" />
         
-        <!-- MILLENNIAL MEDIA - 광고 노출을 위해 필요한 선언입니다. -->
-		<activity android:name="com.millennialmedia.android.MMActivity"
-			android:theme="@android:style/Theme.Translucent.NoTitleBar"
-			android:configChanges="keyboardHidden|orientation|keyboard" >
-		</activity>
+        <!-- MILLENNIAL MEDIA - 광고 노출을 위해 필요한 선언입니다. 
+		<activity
+			android:name="com.millennialmedia.internal.MMActivity"
+			android:theme="@style/Theme.MMTransparent" />
+		<activity android:name="com.millennialmedia.internal.MMIntentWrapperActivity" /> -->
         
-        <!-- MOBCLIX - 광고 노출을 위해 필요한 선언입니다. -->
-		<meta-data android:name="com.mobclix.APPLICATION_ID"
-            android:value="insert-your-application-key" />
-		<activity android:name="com.mobclix.android.sdk.MobclixBrowserActivity"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"
-            android:hardwareAccelerated="true" />
+        <!-- AXONIX(MOBCLIX) - 광고 노출을 위해 필요한 선언입니다. -->
+		<!-- Add the application key -->
+	  	<meta-data android:name="com.axonix.APPLICATION_ID"
+	    android:value="발급받은 AXONIX(MOBCLIX) 등록키"/>
+	  	<!-- Axonix browser activity -->
+	  	<activity
+	    	android:name="com.axonix.android.sdk.AxonixBrowserActivity"  
+	    	android:theme="@android:style/Theme.Translucent.NoTitleBar"
+	    	android:hardwareAccelerated="true" />
+		
         
         <!-- UPLUSAD - 광고 노출을 위해 필요한 선언입니다. -->
 		<activity android:name="kr.co.uplusad.dmpcontrol.LGUDMPActivity"
@@ -108,9 +108,11 @@
         <!-- MEZZO DEBUG 모드 사용여부 0:사용안함 1:사용 -->
         <meta-data android:name="DEBUG_MODE" android:value="1" />
         <activity
-            android:name="com.mapps.android.view.InterstitialView" />
+            android:name="com.mapps.android.view.InterstitialView"
+        	android:screenOrientation="portrait"/>
         <activity
-            android:name="com.mapps.android.view.MultimediaView" />
+            android:name="com.mapps.android.view.MultimediaView"
+            android:theme="@android:style/Theme.Translucent" />
         <activity
             android:name="com.mapps.android.view.AlertNotiView"
             android:theme="@android:style/Theme.Translucent"/>
@@ -190,6 +192,12 @@
         </activity>
         <activity
             android:name=".AdlibTestProjectActivity8"
+            android:configChanges="orientation"
+            android:hardwareAccelerated="true"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".AdlibTestProjectActivity9"
             android:configChanges="orientation"
             android:hardwareAccelerated="true"
             android:label="@string/app_name" >
