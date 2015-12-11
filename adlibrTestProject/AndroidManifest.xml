@@ -31,14 +31,14 @@
         <activity
             android:name="com.mocoplex.adlib.AdlibDialogActivity"
             android:theme="@android:style/Theme.Translucent"
-			android:configChanges="orientation|keyboard|keyboardHidden" />
+			android:configChanges="orientation|screenSize|keyboard|keyboardHidden" />
         
         <activity android:name="com.mocoplex.adlib.AdlibWebBrowserActivity"
-            android:configChanges="orientation|keyboard|keyboardHidden" />
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden" />
             
         <activity android:name="com.mocoplex.adlib.AdlibVideoPlayer"
             android:theme="@android:style/Theme.NoTitleBar"
-            android:configChanges="orientation|keyboard|keyboardHidden" />
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden" />
         <!-- 애드립 사용을 위해 꼭 추가해주세요. -->
 
 		<!-- T-AD - 광고 노출을 위해 필요한 선언입니다. -->
@@ -48,7 +48,11 @@
 			android:label="Ad Activity"
 			android:theme="@android:style/Theme.Translucent.NoTitleBar" >
 		</activity>
-		       
+		<receiver android:name="com.skplanet.tad.SyrupAdReceiver" > 
+		    <intent-filter>
+		        <action android:name="com.skplanet.syrupad.action.SAID_CHANGED" />
+		    </intent-filter>
+		</receiver>
 		<!-- TAD - 사용하지 않는다면 여기까지 삭제 -->
         
         <!-- ADAM - 전면광고 노출을 위해 필요한 선언입니다. -->
@@ -62,13 +66,10 @@
         <!-- ADMOB - 사용하지 않는다면 여기까지 삭제 -->
         
         <!-- INMOBI - 광고 노출을 위해 필요한 선언입니다. -->        
-		<!-- Mandatory activity declaration to show the Ad in the embedded browser -->
-		<activity android:name="com.inmobi.androidsdk.IMBrowserActivity"
-            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize"
-            android:hardwareAccelerated="true" />
-
-        <!-- NAVER - 광고 노출을 위해 필요한 선언입니다. -->                
-        <activity android:name="com.nbpcorp.mobilead.sdk.MobileAdBrowserActivity" />
+		<activity android:name="com.inmobi.rendering.InMobiAdActivity"
+			android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize"
+			android:theme="@android:style/Theme.Translucent.NoTitleBar"
+			android:hardwareAccelerated="true" />
         
         <!-- SHALLWEAD - 광고 노출을 위해 필요한 선언입니다. -->
         <receiver android:name="com.co.shallwead.sdk.ShallWeAdReceiver" >
@@ -167,7 +168,7 @@
         
        <activity
             android:name=".AdlibTestProjectActivity"
-            android:configChanges="orientation"
+            android:configChanges="orientation|screenSize"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -177,43 +178,43 @@
         </activity>
         <activity
             android:name=".AdlibTestProjectActivity2"
-            android:configChanges="orientation"
+            android:configChanges="orientation|screenSize"
             android:label="@string/app_name" >
         </activity>
         <activity
             android:name=".AdlibTestProjectActivity3"
-            android:configChanges="orientation"
+            android:configChanges="orientation|screenSize"
             android:label="@string/app_name" >
         </activity>
         <activity
             android:name=".AdlibTestProjectActivity4"
-            android:configChanges="orientation"
+            android:configChanges="orientation|screenSize"
             android:label="@string/app_name" >
         </activity>
         <activity
             android:name=".AdlibTestProjectActivity5"
-            android:configChanges="orientation"
+            android:configChanges="orientation|screenSize"
             android:label="@string/app_name" >
         </activity>
         <activity
             android:name=".AdlibTestProjectActivity6"
-            android:configChanges="orientation"
+            android:configChanges="orientation|screenSize"
             android:label="@string/app_name" >
         </activity>
         <activity
             android:name=".AdlibTestProjectActivity7"
-            android:configChanges="orientation"
+            android:configChanges="orientation|screenSize"
             android:label="@string/app_name" >
         </activity>
         <activity
             android:name=".AdlibTestProjectActivity8"
-            android:configChanges="orientation"
+            android:configChanges="orientation|screenSize"
             android:hardwareAccelerated="true"
             android:label="@string/app_name" >
         </activity>
         <activity
             android:name=".AdlibTestProjectActivity9"
-            android:configChanges="orientation"
+            android:configChanges="orientation|screenSize"
             android:hardwareAccelerated="true"
             android:label="@string/app_name" >
         </activity>

@@ -6,7 +6,7 @@
  */
 
 /*
- * confirmed compatible with AdMixer SDK 1.3.5
+ * confirmed compatible with AdMixer SDK 1.3.11
  */
 
 package test.adlib.project.ads;
@@ -19,7 +19,6 @@ import com.admixer.InterstitialAd;
 import com.admixer.InterstitialAdListener;
 import com.mocoplex.adlib.AdlibManager;
 import com.mocoplex.adlib.SubAdlibAdViewCore;
-import com.mocoplex.adlib.util.LogUtil;
 
 import android.app.Activity;
 import android.content.Context;
@@ -54,7 +53,7 @@ public class SubAdlibAdViewAdmixer extends SubAdlibAdViewCore {
 		adInfo.setMaxRetryCountInSlot(-1);  // 리로드 시간 내에 전체 AdNetwork 반복 최대 횟수(-1 : 무한, 0 : 반복 없음, n : n번 반복)
 		
 		ad = new AdView(this.getContext());
-		LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+		LayoutParams params = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
 		ad.setLayoutParams(params);
 		ad.setAdInfo(adInfo, (Activity) this.getContext());
 		ad.setAdViewListener(new AdViewListener() {
