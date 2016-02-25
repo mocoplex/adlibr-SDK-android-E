@@ -11,14 +11,13 @@
 
 package test.adlib.project.ads;
 
+import android.content.Context;
+import android.util.AttributeSet;
+import android.view.View;
+
 import com.mapps.android.listner.ManAdListner;
 import com.mapps.android.view.AdView;
 import com.mocoplex.adlib.SubAdlibAdViewCore;
-
-import android.content.Context;
-import android.os.Handler;
-import android.util.AttributeSet;
-import android.view.View;
 
 /*
  AndroidManifest.xml 에 아래 내용을 추가해주세요.
@@ -53,9 +52,9 @@ public class SubAdlibAdViewMezzo extends SubAdlibAdViewCore {
 		super(context, attrs);
 		
 		ad = new AdView(context, mezzoID, 1, 0);
-				
 		ad.setManAdListner(new ManAdListner() {
 
+			@Override
 			public void onChargeableBannerType(View v, boolean bcharge) {
 				
 				if(ad == v){
@@ -67,6 +66,7 @@ public class SubAdlibAdViewMezzo extends SubAdlibAdViewCore {
 				}
 			}
 
+			@Override
 			public void onFailedToReceive(View v, int errCode) {
 				
 				if(ad == v){
@@ -118,6 +118,7 @@ public class SubAdlibAdViewMezzo extends SubAdlibAdViewCore {
 		if(ad != null){
 			ad.StopService();
 		}
+		
         super.onPause();
 	}
 	
@@ -130,5 +131,4 @@ public class SubAdlibAdViewMezzo extends SubAdlibAdViewCore {
         
         super.onDestroy();
 	}
-	
 }
